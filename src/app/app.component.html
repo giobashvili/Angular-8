@@ -1,9 +1,9 @@
-<app-header (transport)="onNavigation($event)"></app-header>
+<app-header (transport)="loaded($event)"></app-header>
  <div class="container">
   <div class="row">
    <div class="col-xs-12">
-    <app-recipes *ngIf="loaded === 'recipe'"></app-recipes>
-    <app-shoping-list *ngIf="loaded !== 'recipe'"></app-shoping-list>
+    <app-recipes *ngIf="navigation === 'recipe'"></app-recipes>
+    <app-shoping-list *ngIf="navigation !=='recipe'"></app-shoping-list>
    </div>
   </div>
 </div>

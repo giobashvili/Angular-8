@@ -7,16 +7,17 @@ import {stringify} from 'querystring';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
- @Output() transport =  new EventEmitter<string>();
+  @Output() transport = new EventEmitter<string>();
   onSelect(feature: string) {
     this.transport.emit(feature);
   }
-  constructor() { }
+constructor() { }
 
-  ngOnInit() {
+ngOnInit() {
   }
 
 }
+
 
 
 
