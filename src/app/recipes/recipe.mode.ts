@@ -1,10 +1,8 @@
 export class RecipeModel {
-  // tslint:disable-next-line:ban-types
-  public name: String;
-  // tslint:disable-next-line:ban-types
-  public description: String;
-  // tslint:disable-next-line:ban-types
-  public imagePath: String;
+
+  public name: string;
+  public description: string;
+  public imagePath: string;
 
   constructor(name: string, description: string, imagePath: string) {
     this.name = name;

@@ -3,7 +3,6 @@ import { RecipeModel} from '../../recipe.mode';
 
 
 
-
 @Component({
   selector: 'app-recipe-item',
   templateUrl: './recipe-item.component.html',
@@ -11,10 +10,14 @@ import { RecipeModel} from '../../recipe.mode';
 })
 export class RecipeItemComponent implements OnInit {
   @Input() item = RecipeModel;
-@Output() recipeSelected = new EventEmitter<void>();
-  OnSelected() {
+  @Output() recipeSelected = new EventEmitter<number>();
+
+  onSelected() {
     this.recipeSelected.emit();
   }
+
+
+
   constructor() { }
 
 ngOnInit() {

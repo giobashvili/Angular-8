@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { RecipeModel } from '../recipe.mode';
-import {stringify} from 'querystring';
+
 @Component({
   selector: 'app-recipe-list',
   templateUrl: './recipe-list.component.html',
@@ -15,13 +15,9 @@ export class RecipeListComponent implements OnInit {
     new RecipeModel('ხინკალი', 'უფრო გემრიელი', 'http://firstnews.ge/media/k2/items/cache/aeb492336c5690bbeb3eb42716b6c50b_XL.jpg')
   ];
 
-
-
-
-  onRecipeSelected(itemEl: RecipeModel) {
-this.recipeWasSelected.emit(itemEl);
+  OnrecipeSelected(item: RecipeModel) {
+    this.recipeWasSelected.emit(item);
   }
-
 
   constructor() { }
 
